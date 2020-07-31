@@ -10,6 +10,8 @@
 <h3>Date Of First Appointment: @Html.DisplayFor(model => model.DateOfFirstApp)</h3>
 <h3>@Html.DisplayNameFor(model => model.Gender): @Html.DisplayFor(model => model.Gender)</h3>
 
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
+
 
 <p>@Html.ActionLink("Back to Stylists", "Index")</p>
 <p>@Html.ActionLink("See All Clients", "Index", "Clients")</p>

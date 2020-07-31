@@ -11,6 +11,8 @@
 <h3>Date Of Hire: @Html.DisplayFor(model => model.DateOfHire)</h3>
 <h3>@Html.DisplayNameFor(model => model.Wage): @Html.DisplayFor(model => model.Wage)</h3>
 
+<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
+
 
 <p>@Html.ActionLink("Back to Stylists", "Index")</p>
 <p>@Html.ActionLink("See All Clients", "Index", "Clients")</p>
