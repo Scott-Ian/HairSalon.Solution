@@ -45,7 +45,7 @@ _Long description._
 
 ## Known Bugs
 
-_ _
+_There is DbUpdate Concurrency Exception being thrown when a user attempts to submit changes to an existing entry. I am not sure what is causing this._
 
 ## Support and contact details
 
