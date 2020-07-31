@@ -43,7 +43,7 @@ _This is a web application which allows a user to manage a list of stylists and 
     >PRIMARY KEY (`StylistId`) \
     >) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-    **Please note that the SQL code snippets above include backslashes as a line break, and are not intended as part of the SQL instructions**
+    **Please note that the SQL code snippets above may include backslashes as a line break for MarkDown viewers, and are not intended as part of the SQL instructions**
 6. To initiate this program, run the command: $ dotnet run
 
 
