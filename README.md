@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is a web application which allows a user to manage a list of stylists and their respective clients. The user can add new clients, stylits, and delete/remove, as well as update values for both._
+_This is a web application which allows a user to manage a list of stylists and their respective clients. The user can add new clients, stylists, and delete/remove, as well as update values for both._
 
 ### User Stories
   * As the salon owner, I need to be able to see a list of all stylists.
