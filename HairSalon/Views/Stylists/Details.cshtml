@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@model HairSalon.Models.Stylist;
+
+<h2>Stylist Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>Date Of Hire: @Html.DisplayFor(model => model.DateOfHire)</h3>
+<h3>@Html.DisplayNameFor(model => model.Wage): @Html.DisplayFor(model => model.Wage)</h3>
+
+
+<ul>
+@if (@Model.Clients.Count == 0)
+{
+  <p>No Clients Found</p>
+}
+
+
+@foreach (Client client in @Model.Clients)
+{
+  <li>Name: @client.Name</li>
+  <li>Date Of First Appointment: @client.DateOfFirstApp</li>
+  <li>Gender @client.Gender</li>
+  <li></li>
+}
+</ul>
+
+
+<p>@Html.ActionLink("Back to Stylists", "Index")</p>
+<p>@Html.ActionLink("See All Clients", "Index", "Clients")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
