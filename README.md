@@ -14,6 +14,22 @@ _Long description._
   * As the salon owner, I need to add a new stylist to our system when they are hired.
   * As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
 
+
+  CREATE TABLE `ian_scott`.`clients` (
+  `ClientId` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NULL DEFAULT 'Null',
+  `DateOfFirstApp` DATE NULL DEFAULT NULL,
+  `Gender` VARCHAR(255) NULL DEFAULT 'Null',
+  `StylistId` INT NULL DEFAULT 0,
+  PRIMARY KEY (`ClientId`));
+
+  CREATE TABLE `ian_scott`.`stylists` (
+  `StylistId` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NULL DEFAULT 'Null',
+  `DateOfHire` DATE NULL DEFAULT NULL,
+  `Wage` INT NULL DEFAULT 0,
+  PRIMARY KEY (`StylistId`));
+
 ## Setup/Installation Requirements
 
 1. This program utilizes .NET version 3.1, and requires this framework to be pre-installed:
