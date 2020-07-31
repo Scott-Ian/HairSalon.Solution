@@ -8,10 +8,10 @@ using System;
 
 namespace HairSalon.Controllers
 {
-  public class StylistsController : Controllers
+  public class StylistsController : Controller
   {
     private readonly HairSalonContext _db;
-    public HairSalonContext (HairSalonContext db)
+    public StylistsController (HairSalonContext db)
     {
       _db = db;
     }
@@ -44,11 +44,11 @@ namespace HairSalon.Controllers
     public ActionResult Edit (int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      return View (stylist);
+      return View (thisStylist);
     }
 
     [HttpPost]
-    public Actionresult Edit (Stylist stylist)
+    public ActionResult Edit (Stylist stylist)
     {
       _db.Entry(stylist).State = EntityState.Modified;
       _db.SaveChanges();

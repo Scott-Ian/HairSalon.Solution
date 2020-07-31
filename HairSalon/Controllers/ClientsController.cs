@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace HairSalon.Controllers
 {
-  public class ClientsController : Controllers
+  public class ClientsController : Controller
   {
     private readonly HairSalonContext _db;
 
@@ -18,7 +18,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Client> allClients = _db.Clients.Include(items => items.Category).ToLIst();
+      List<Client> allClients = _db.Clients.Include(items => items.Stylist).ToList();
       return View(allClients);
     }
 
@@ -32,7 +32,7 @@ namespace HairSalon.Controllers
     public ActionResult Create (Client client)
     {
       _db.Clients.Add(client);
-      _db.Clients.SaveChanges();
+      _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
@@ -59,14 +59,14 @@ namespace HairSalon.Controllers
 
     public ActionResult Delete (int id)
     {
-      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId);
-      return View(thisItem);
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      return View(thisClient);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed (int id)
     {
-      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId);
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
       _db.Clients.Remove(thisClient);
       _db.SaveChanges();
       return RedirectToAction("Index");
