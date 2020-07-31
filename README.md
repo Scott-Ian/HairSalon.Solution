@@ -44,6 +44,7 @@ _This is a web application which allows a user to manage a list of stylists and 
     >) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
     **Please note that the SQL code snippets above may include backslashes as a line break for MarkDown viewers, and are not intended as part of the SQL instructions**
+5.5 Conversely you can import the database and structure schema directly into your MySQL Workbench by going to Administration->DataImport/Restor and importing the file ian_scott.sql, at the top level of this project, as a Self-Contained File.
 6. To initiate this program, run the command: $ dotnet run
 
 
